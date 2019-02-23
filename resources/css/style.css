@@ -1,0 +1,42 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dragme {
+    cursor: move;
+  }
+
+.bone {
+    position:relative;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    height: 100px;
+    width: 45px;
+    background-color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.rotated {
+    -webkit-transform : rotate(180deg); 
+    -moz-transform : rotate(180deg); 
+    -ms-transform : rotate(180deg); 
+    -o-transform : rotate(180deg); 
+    transform : rotate(180deg); 
+
+}
+
+.stats{
+    font-size: 10pt;
+}
+
+.bonetarget {
+    border: 1px;
+    border-style: dashed;
+    border-color: gray;
+    height: 150px;
+    width: 50px;
+}
