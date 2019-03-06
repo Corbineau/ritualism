@@ -39,7 +39,7 @@ function getRandomArrayElements(arr, count) {
         randoms.push(clone[index]);
         clone[index] = clone.pop();
     }
-    return randoms;
+    console.log(randoms);
 }
 
 function addElement () { 
