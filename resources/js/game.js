@@ -32,10 +32,13 @@ $(".bone").on('click', function (event) {
 
 
 
-$('#pullBtn').on('click', function(){
-
+$('#pullBtn').on('click', function () {
+    var pull = $("#pullNum").val();
+    //console.log(pull);
+    var pullBones = getRandomArrayElements(bones, pull);
+    console.log(pullBones);
+    addBones(pullBones); 
 });
-
 
 
 function getRandomArrayElements(arr, count) {
@@ -45,20 +48,34 @@ function getRandomArrayElements(arr, count) {
         randoms.push(clone[index]);
         clone[index] = clone.pop();
     }
+    console.log(randoms);
     return randoms;
 }
 
 
 
-function addBone() {
-    var pullBones = getRandomArrayElements(bones, fatigue);
-    for (i = 0; i < pullBones; i++) {
-        var top = pullBones[i.slice(0)];
+function addBones(pullBones) {
+    for (i = 0; i < pullBones.length; i++) {
+       var top = pullBones[i].slice(1);
+       //var a = pullBones.slice(0);
+       //console.log(a);
+       //var top = a.slice(0);
+       //var bottom = a.slice(1);
         console.log(top);
-        var bottom = pullBones[i.slice(1)];
+       var bottom = pullBones[i][0];
         console.log(bottom);
-        // create a new bone - this needs to work up to the remaining fatigue.
-        var newBone = $("<div class='bone'>").append(`<div class="top">${top}</div>`).append(`<div class='bottom'>${bottom}</div>`);
+        // create a new bone 
+        var newBone = $("<div>");
+        newBone.addClass("dragme bone ui-draggable ui-draggable-handle");
+        var newTop = $("<div class='top'>");
+        newTop.attr("data-top", top);
+        newTop.text(bottom);
+        var newBottom = $("<div class='bottom'>");
+        newBottom.attr("data-bottom", bottom);
+        newBottom.text(top);
+        newBone.append(newTop);
+        newBone.append(newBottom);
+        $("#bonefield").append(newBone);
 
     }
 

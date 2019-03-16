@@ -11,8 +11,11 @@ body{
     border: 1px;
     border-style: solid;
     border-color: black;
-    height: 100px;
-    width: 45px;
+    min-height: 100px;
+    min-width: 50px;
+    margin: 2px;
+    padding: 1px;
+    float: left;
     background-color: white;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -22,13 +25,13 @@ body{
 
 .bottom {
     display: block;
-    height:50px;
+    padding:23px 15px;
     border-top: 1px solid black;
 }
 
 .top {
     display: block;
-    height:50px;
+    padding:23px 15px;
     border-bottom: 1px solid black;
 }
 
