@@ -17,16 +17,7 @@ $("#fatigueBtn").on("click", function () {
 
 
 
-//****bone visual element behaviour****
 
-//drag the bones anywhere
-$(".dragme").draggable();
-//rotate bones
-$(".bone").on('click', function (event) {
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-    $(this).toggleClass('rotated');
-});
 
 //***** actual functionality behaviour ******/
 
@@ -81,6 +72,24 @@ function addBones(pullBones) {
 
 
 }
+
+$(document).ready(function(){
+
+//****bone visual element behaviour****
+
+//drag the bones anywhere
+$(".dragme").draggable();
+//$(document).draggable(".dragme");
+//rotate bones
+$(document).on('click', '.bone', function (event) {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    $(this).toggleClass('rotated');
+});
+
+})
+
+
 
 
 
