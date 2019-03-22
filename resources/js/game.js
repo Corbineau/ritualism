@@ -67,6 +67,7 @@ function addBones(pullBones) {
         newBone.append(newTop);
         newBone.append(newBottom);
         $("#bonefield").append(newBone);
+        $(document).find(".dragme").draggable();
 
     }
 
@@ -78,7 +79,7 @@ $(document).ready(function(){
 //****bone visual element behaviour****
 
 //drag the bones anywhere
-$(".dragme").draggable();
+$(document).find(".dragme").draggable();
 //$(document).draggable(".dragme");
 //rotate bones
 $(document).on('click', '.bone', function (event) {
