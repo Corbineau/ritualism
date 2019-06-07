@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Corbineau/ritualism/issues"
   },
-  "homepage": "https://github.com/Corbineau/ritualism#readme"
+  "homepage": "https://github.com/Corbineau/ritualism#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
 }
