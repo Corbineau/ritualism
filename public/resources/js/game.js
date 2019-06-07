@@ -1,4 +1,5 @@
 //establish variables
+const turn = 6000;
 var totalFatigue = 0;
 var fatigue = 0;
 var bones = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 3], [3, 4], [3, 5], [3, 6], [4, 4], [4, 5], [4, 6], [5, 5], [5, 6], [6, 6]];
@@ -39,7 +40,7 @@ function getRandomArrayElements(arr, count) {
         randoms.push(clone[index]);
         clone[index] = clone.pop();
     }
-    console.log(randoms);
+    // console.log(randoms);
     return randoms;
 }
 
@@ -74,6 +75,12 @@ function addBones(pullBones) {
 
 }
 
+
+
+init = () => {
+
+}
+
 $(document).ready(function(){
 
 //****bone visual element behaviour****
@@ -89,15 +96,3 @@ $(document).on('click', '.bone', function (event) {
 });
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
