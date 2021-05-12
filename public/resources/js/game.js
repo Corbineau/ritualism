@@ -48,13 +48,13 @@ function getRandomArrayElements(arr, count) {
 
 function addBones(pullBones) {
     for (i = 0; i < pullBones.length; i++) {
-       var top = pullBones[i].slice(1);
+       let top = pullBones[i].slice(1);
        //var a = pullBones.slice(0);
        //console.log(a);
        //var top = a.slice(0);
        //var bottom = a.slice(1);
         console.log(top);
-       var bottom = pullBones[i][0];
+       let bottom = pullBones[i][0];
         console.log(bottom);
         // create a new bone 
         var newBone = $("<div>");
